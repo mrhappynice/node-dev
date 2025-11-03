@@ -1,0 +1,16 @@
+{
+  "name": "node-dev-alpine",
+  "image": "mrhappynice/node-dev:latest",
+  "overrideCommand": true,
+  "postStartCommand": "cat /proc/cpuinfo",
+  "containerEnv": {
+    "EXAMPLE": "this is an example env"
+  },
+  "forwardPorts": [777],
+  "portsAttributes": {
+    "777": {
+      "label": "lucky",
+      "onAutoForward": "silent"
+    }
+  }
+}
